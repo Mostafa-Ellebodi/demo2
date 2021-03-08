@@ -131,7 +131,7 @@ if st.button("Get Answer!"):
                                         max_seq_len_query=64,
                                         max_seq_len_passage=512,
                                         batch_size=16,
-                                        use_gpu=True,
+                                        use_gpu=False,
                                         embed_title=True,
                                         use_fast_tokenizers=False)
         # Important: 
@@ -149,7 +149,7 @@ if st.button("Get Answer!"):
         # Hugging Face's model hub (https://huggingface.co/models)
 
         reader = FARMReader(model_name_or_path="deepset/bert-large-uncased-whole-word-masking-squad2", 
-                            use_gpu=True, 
+                            use_gpu=False, 
                             context_window_size=1024,
                             )
         print("finished reader")
